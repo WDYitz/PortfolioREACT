@@ -1,0 +1,81 @@
+.CardRepos {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    background-color: #292929;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px;
+    border: 0.1em #ce4e7d95 solid;
+    filter: drop-shadow(0px 0px 20px #ce4e7d15);
+    animation: rotation ease-in-out 2s infinite;
+}
+
+.arrowDown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: rgba(254, 254, 254, 0.825);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.modalProj {
+    height: 200px;
+    border-radius: 5px;
+    width: 100%;
+    left: 0;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.modalProj p {
+    margin-bottom: 20px;
+}
+
+
+.modalProj a {
+    color: white;
+    border: 0.1em #ce4e7d95 solid;
+    text-align: center;
+    padding: 4px;
+    background-color: #f0e9eb0e;
+    letter-spacing: 2px;
+}
+
+@media screen and (min-width: 900px) {
+    .CardRepos {
+        width: 45%;
+        height: 50%;
+    }
+}
+
+@media screen and (min-width: 1740px) {
+    .CardRepos {
+        width: 30%;
+        height: 100%;
+    }
+}
+
+/** ANIMAÇÃO */
+
+@keyframes rotation {
+    0% {
+        transform: rotateX('0');
+    }
+
+    100% {
+        transform: rotateX('360');
+    }
+}
