@@ -1,11 +1,9 @@
-import { useState, useEffect } from 'react';
-import { BiCodeAlt } from 'react-icons/bi';
+/* eslint-disable react/prop-types */
 
+import { BiCodeAlt } from 'react-icons/bi';
 import '../CardRepos/cardRepos.css';
 
-
 export function CardRepos(props) {
-    
 
     return (
         <div className="CardRepos">

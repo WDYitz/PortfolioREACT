@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { CardRepos } from '../components/CardRepos';
 import VanillaTilt from 'vanilla-tilt';
 import me from '../assets/images/me.jpg'
@@ -19,9 +19,6 @@ function Home() {
     let bottomAnime = document.querySelector('.backanimeBottom');
 
     let value = window.scrollY;
-    let deviceWidth = window.innerWidth;
-    console.log(deviceWidth);
-
 
     if (value >= 140) {
       topAnime.style.opacity = 0;
@@ -63,18 +60,19 @@ function Home() {
       url: 'https://wdyitz.github.io/RocketCoffeeUI/'
     },
     {
-      title: 'Grilo Burguer',
-      detail: 'Primeiro projeto (DESCONTINUADO) - 2021',
-      url: 'http://griloburguer.epizy.com/',
+      title: 'Carrinho de compras',
+      detail: 'Shopping Cart com Context API e Reducers - 2023',
+      url: 'https://github.com/WDYitz/shopping-cart',
     },
     {
-      title: 'Frontend Mentor UI',
-      detail: 'Desafio do Front end Mentor com consumo de API para distribuição de dados dinamicamente.',
-      url: 'https://wdyitz.github.io/ResultSummary-FrontendMentor/'
+      title: 'Média Escolar UI',
+      detail: 'Projeto que calcula a média escolar dos alunos dinamicamente.',
+      url: 'https://github.com/WDYitz/MediaEscolar-UI'
     }];
 
 
   return (
+    // eslint-disable-next-line react/no-unknown-property
     <div className='Home' onLoad={() => {
       /* 
         * ANIMATION ON SCROLL */
@@ -92,8 +90,8 @@ function Home() {
       <aside>
         <span className='backanime'></span>
         <span className='backanimeBottom'></span>
-        <span className='github'><a href="https://github.com/WDYitz" target='_blank'><i class="bi bi-github"></i></a></span>
-        <span className='linkedin'><a href="https://www.linkedin.com/in/yitzhak-ben-rodriguez-70797b208/" target='_blank'><i class="bi bi-linkedin"></i></a></span>
+        <span className='github'><a href="https://github.com/WDYitz" target='_blank' rel="noreferrer"><i className="bi bi-github"></i></a></span>
+        <span className='linkedin'><a href="https://www.linkedin.com/in/yitzhak-ben-rodriguez-70797b208/" target='_blank' rel="noreferrer"><i className="bi bi-linkedin"></i></a></span>
         <div className='container-perfil'>
           <img src={me} alt="foto de perfil do portfolio" id='fotoPerfil' data-tilt />
           <div className='container-perfil-name'>
@@ -166,7 +164,7 @@ function Home() {
           <h2>Experiência</h2>
           <ul>
             <li>Participei da 14ª semana do Jovem Empreendedor de Santos na área portuária, Desenvolvendo UIs para o software criado.</li>
-            <li>Participei na área de desenvolvimento do <b id="projInteg">Projeto Integrador</b> "Happy Mind", aplicação web em ASP.NET.</li>
+            <li>Participei na área de desenvolvimento do <b id="projInteg">Projeto Integrador</b> Happy Mind, aplicação web em ASP.NET.</li>
             <li>Experiência na criação de UIs responsivas e modernas.</li>
             <li>Prototipação de interfaces.</li>
           </ul>
@@ -180,6 +178,7 @@ function Home() {
           <div className="cardsProj">
             {
               cardProjetos.map((e) => (
+                // eslint-disable-next-line react/jsx-key
                 <CardRepos
                   title={e.title}
                   details={e.detail}
